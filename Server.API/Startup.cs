@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Server.API.Authorization;
 using Server.API.ExceptionHelpers;
 
 namespace Server.API
@@ -36,6 +37,7 @@ namespace Server.API
 
             //Use Middleware
             app.UseMiddleware<ExceptionHandlerMiddleware>();
+            app.UseMiddleware<JwtMiddleware>();
 
             app.UseEndpoints(endpoints =>
             {

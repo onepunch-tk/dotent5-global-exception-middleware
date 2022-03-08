@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json.Linq;
+using System;
 using System.Net;
 using System.Text.Json;
 
@@ -30,6 +31,9 @@ namespace Server.API.ExceptionHelpers
 
                 case ResultType.BadRequest:
                     return HttpStatusCode.BadRequest;
+                
+                case ResultType.Unauthorized:
+                    return HttpStatusCode.Unauthorized;
 
                 default:
                     throw new Exception();

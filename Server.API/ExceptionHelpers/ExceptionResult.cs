@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
-using System.Threading.Tasks;
+﻿using System.Text.Json.Serialization;
 
 namespace Server.API.ExceptionHelpers
 {
@@ -10,7 +6,6 @@ namespace Server.API.ExceptionHelpers
     {
         public string ExceptionMessage { get; set; }
         
-        [JsonIgnore]
         public ResultType ResultType { get; set; }
     }
 }

@@ -7,4 +7,5 @@ public enum ResultType
     Forbid,
     Conflict,
     BadRequest,
+    Unauthorized,
 }
